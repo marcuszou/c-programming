@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main3(){
+int main(){
 
     // format specifier %
     // %c = character
