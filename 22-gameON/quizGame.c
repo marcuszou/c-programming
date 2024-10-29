@@ -12,32 +12,32 @@ int main()
                            "A. Objective C", "B. B", "C. C++", "D. C#"};
 
     char answers[3] = {'B', 'A', 'B'};
-    int numberOfQuestions = sizeof(questions)/sizeof(questions[0]);
+    int numberOfQuestions = sizeof(questions) / sizeof(questions[0]);
 
     char guess;
     int score;
 
     printf("Quiz Game\n");
 
-    for(int i = 0; i < numberOfQuestions; i++)
+    for (int i = 0; i < numberOfQuestions; i++)
     {
         printf("************************************\n");
         printf("%s\n", questions[i]);
         printf("************************************\n");
 
-        for(int j = (i * 4); j < (i * 4) + 4; j++)
+        for (int j = (i * 4); j < (i * 4) + 4; j++)
         {
             printf("%s\n", options[j]);
         }
 
         printf("guess: ");
-        //fflush(stdin);
+        // fflush(stdin);
         scanf("%c", &guess);
         scanf("%c"); // clear \n from input buffer, only works in Windows, not mac/linux
 
         guess = toupper(guess);
 
-        if(guess == answers[i])
+        if (guess == answers[i])
         {
             printf("CORRECT!\n");
             score++;
@@ -51,6 +51,6 @@ int main()
     printf("************************************\n");
     printf("FINAL SCORE: %d/%d\n", score, numberOfQuestions);
     printf("************************************\n");
-    
+
     return 0;
 }
