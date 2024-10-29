@@ -31,9 +31,9 @@ int main()
         }
 
         printf("guess: ");
-        fflush(stdin);
-        scanf("%c[^\r]", &guess);
-        scanf("%c"); // clear \n from input buffer, only works in Windows, not mac
+        //fflush(stdin);
+        scanf("%c", &guess);
+        scanf("%c"); // clear \n from input buffer, only works in Windows, not mac/linux
 
         guess = toupper(guess);
 
